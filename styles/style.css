@@ -164,7 +164,7 @@
   margin-block-start: 25px;
 }
 
-.heart-button {
+.card__icon-button {
   position: relative;
   margin-inline-start: auto;
   border: 2px solid transparent;
@@ -174,11 +174,11 @@
   block-size: 38px;
 }
 
-.heart-button:focus {
+.card__icon-button:focus {
   outline: none;
 }
 
-.heart-button:focus-visible {
+.card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
   transition: border 0.3s ease;
 }
