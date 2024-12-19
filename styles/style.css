@@ -285,7 +285,8 @@
   position: relative;
   color: var(--mix-blend-color);
   mix-blend-mode: difference;
-  width:  var(--icon-width);};
+  width:  var(--icon-width);
+};
 
 
 .dialog[open] {
