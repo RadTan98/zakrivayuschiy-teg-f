@@ -37,7 +37,7 @@
     }
   }
   
-  .contour{
+  .contour {
     fill: var(ccent-color-svg);
     transition: fill 0.1s linear;
   }
