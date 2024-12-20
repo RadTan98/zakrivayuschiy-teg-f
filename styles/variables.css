@@ -18,4 +18,10 @@
     --icon-width:22px;
     }
 
+    @media (width <= 375px) {
+      :root {
+        --inline-size-block: 100%;
+        --icon-width:28px;
+      }
+    }
     

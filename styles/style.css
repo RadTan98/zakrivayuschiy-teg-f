@@ -27,13 +27,13 @@
 .header {
   margin-block: 100px;
   border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
 }
 
 .header_main_size {
   margin-inline: auto;
   inline-size: var(--inline-size-block);
- 
-  background-color: var(--bg-color);
+  
 }
 
 .logo_section {
@@ -64,6 +64,7 @@
   flex-direction: column;
   gap: 50px;
   margin: 0 auto;
+  padding-bottom:103px;
 }
 
 .card {
@@ -190,14 +191,9 @@
 }
 
 .card__like-button {
-  position: relative;
-  border: 2px solid currentColor;
   padding: 11px 17px;
-  font-family: var(--accent-font, fantasy);
-  font-size: 14px;
   line-height: 90%;
   background-color: transparent;
-  cursor: pointer;
   inline-size: 130px;
 }
 
@@ -207,31 +203,6 @@
   gap: 8px;
   color: var(--mix-blend-color);
   mix-blend-mode: difference;
-}
-
-.card__like-button::before {
-  content: '';
-  position: absolute;
-  background-color: currentColor;
-  transition: inline-size 0.5s ease-in-out;
-  inline-size: 0;
-  block-size: 100%;
-  inset-inline-start: 0;
-  inset-block-start: 0;
-}
-
-.card__like-button:hover::before {
-  transition: inline-size 0.5s ease-in-out;
-  inline-size: 100%;
-}
-
-.card__like-button:focus {
-  outline: none;
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 currentColor;
-  transition: box-shadow 0.3s ease;
 }
 
 .save-section {
@@ -244,109 +215,97 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  border: 2px solid currentColor;
-  cursor: pointer;
-  font-family: var(--accent-font, fantasy);
-  font-size: 14px;
   padding: 15.5px 19px;
   gap: 8px;
   transition: 0.3s ease;
-  background-color: transparent;
+  background-color: var(--bg-color);
   }
-
-.save-button::before {
-  content: '';
-  position: absolute;
-  background-color: currentColor;
-  transition: inline-size 0.5s ease-in-out;
-  inline-size: 0;
-  block-size: 100%;
-  inset-inline-start: 0;
-  inset-block-start: 0;
-}
-
-.save-button:hover::before {
-  transition: inline-size 0.5s ease-in-out;
-  inline-size: 100%;
-}
-
-.save-button:focus {
-  outline: none;
-}
-
-.save-button:focus-visible {
-  box-shadow: 2px 2px 0 currentColor;
-  transition: box-shadow 0.3s ease;
-}
 
 .icon {
   position: relative;
   color: var(--mix-blend-color);
   mix-blend-mode: difference;
   width:  var(--icon-width);
-};
+}
 
-
-.dialog[open] {
+.dialog {
   margin: auto;
   inset: 0;
   border: 2px solid var(--accent-color);
-  padding-inline: 30px;
-  padding-block: 30px;
   color: currentColor;
   font-family: var(--accent-font, fantasy);
   text-transform: uppercase;
   background-color: var(--bg-color);
   inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
-}
+  padding-inline: 30px;
+  padding-block: 30px;
+ }
+
+
+ 
+  
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 } 
 
-.dialog__svg-container {
+.dialog__svg-container{
   display: flex;
+  align-items: center;
   gap: 20px;
+  text-transform: uppercase;
+  line-height: 21px;
+  block-size: 5.06rem;
 }
 
 .dialog_icon {
   flex-shrink: 0;
   align-self: center;
   width: 39px;
-  
+  height: 39px;
+ }
+
+.text-dialog {
+  font-size: 14px;
+  line-height: 21px; 
 }
 
-.button__text-dialog {
-  font-size: 14px;
-  line-height: 150%;
-}
 
 .dialog__button {
-  position: relative;
   margin-block-start: 30px;
-  border: 2px solid var(--accent-color);
   padding-inline: 17px;
   padding-block: 9px;
+  line-height: 90%;
+  background-color: transparent;
+  inline-size: 100%;
+  text-transform: uppercase;  
+  }
+
+
+.button {
+  position: relative;
+  cursor: pointer;  
+  outline: 2px solid var(--accent-color);
   font-family: var(--accent-font, fantasy);
   font-size: 14px;
-  line-height: 90%;
-  text-transform: uppercase;
-  background-color: transparent;
-  cursor: pointer;
-  inline-size: 100%;
-}
+   }
 
-.dialog__button:focus {
+.button:focus {
   outline: none;
 }
 
-.dialog__button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 currentColor;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s ease;
 }
 
-.dialog__button::before {
+.button::before {
   content: '';
   position: absolute;
   background-color: currentColor;
@@ -357,23 +316,21 @@
   inset-block-start: 0;
 }
 
-.dialog__button:hover::before {
+.button:hover::before {
   transition: inline-size 0.5s ease-in-out;
   inline-size: 100%;
 }
 
-@media (width <= 375px) {
-  :root {
-    --inline-size-block: 100%;
-    --icon-width:28px;
-  }
- 
+@media (width <= 768px) {
   .save-button {
    flex-direction: column;
    padding:15px 18px; 
-  }
+    }
   
-  .dialog[open] {
+    .main {
+      padding-bottom:100px;
+    }
+  .dialog {
     padding-inline: 40px;
     margin-block-end: 241px;
   }
