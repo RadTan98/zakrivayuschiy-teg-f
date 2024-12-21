@@ -260,6 +260,7 @@
   text-transform: uppercase;
   line-height: 21px;
   block-size: 5.06rem;
+  padding-block-end: 15px;
 }
 
 .dialog_icon {
@@ -276,9 +277,9 @@
 
 
 .dialog-button {
-  margin-block-start: 30px;
+  margin-block-start: 15px;
   padding-inline: 17px;
-  padding-block: 9px;
+  padding-block: 10px;
   line-height: 90%;
   background-color: transparent;
   inline-size: 100%;
@@ -330,6 +331,7 @@
 
   .dialog {
     padding-inline: 40px;
-    margin-block-end: 241px;
+    /*margin-block-end: 238px;*/
   }
+  
 }
