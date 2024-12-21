@@ -33,7 +33,6 @@
 .header_main_size {
   margin-inline: auto;
   inline-size: var(--inline-size-block);
-  
 }
 
 .logo_section {
@@ -44,20 +43,17 @@
   gap: 20px;
   font-family: var(--accent-font, fantasy);
   margin-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
+  text-transform: uppercase;
 }
 
 .header_title {
-  font-size: var(--font-size-title-header);
-  
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
 }
 
 .header_content {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  text-transform: uppercase;
   line-height: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
 }
-
-
 
 .main {
   display: flex;
@@ -94,7 +90,6 @@
   text-shadow: -1px 0 var(--color-text-shadow), 0 1px var(--color-text-shadow), 1px 0 var(--color-text-shadow), 0 -1px var(--color-text-shadow);
   inset-inline-end: clamp(0.813rem, 0.548rem + 1.127vw, 1.563rem);
   inset-block-start: 25px;
-
   mix-blend-mode: hard-light;
 }
 
@@ -219,7 +214,7 @@
   gap: 8px;
   transition: 0.3s ease;
   background-color: var(--bg-color);
-  }
+}
 
 .icon {
   position: relative;
@@ -239,15 +234,14 @@
   inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
   padding-inline: 30px;
   padding-block: 30px;
- }
+  flex-direction: column;
+  justify-content: center;
+}
 
   
 .dialog[open] {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  }
-
+}
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
@@ -268,12 +262,12 @@
   align-self: center;
   width: 39px;
   height: 39px;
- }
+}
 
 .text-dialog {
   font-size: 14px;
   line-height: 21px; 
- }
+}
 
 
 .dialog-button {
@@ -284,7 +278,7 @@
   background-color: transparent;
   inline-size: 100%;
   text-transform: uppercase;  
-  }
+}
 
 .button {
   position: relative;
@@ -292,7 +286,7 @@
   border: 2px solid var(--accent-color);
   font-family: var(--accent-font, fantasy);
   font-size: 14px;
-  }
+}
 
 .button:focus {
   outline: none;
@@ -320,23 +314,16 @@
 }
 
 @media (width <= 768px) {
-  .header_title {
-    font-size: var(--font-size-title-header);
-  }
-    
-
   .save-button {
    flex-direction: column;
    padding:15px 18px; 
-   }
+  }
   
-    .main {
+  .main {
       padding-bottom:100px;
-    }
+  }
 
   .dialog {
     padding-inline: 40px;
-    /*margin-block-end: 238px;*/
   }
-  
 }

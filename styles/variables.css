@@ -16,14 +16,13 @@
       linear-gradient(#e7e7e7 0.01%, #1a1a1a);
     --inline-size-block: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
     --icon-width:22px;
-    --font-size-title-header:clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
+   
     }
 
     @media (width <= 768px) {
       :root {
         --inline-size-block: 100%;
         --icon-width:28px;
-        --font-size-title-header: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
       }
     }
     
